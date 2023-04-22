@@ -19,7 +19,7 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentSecondBinding.inflate(inflater, container, false)
 
-        val mySelected = myData1.find{it.subject == MyDataTest1.mySubjectSelected }
+        val mySelected = myData1[MyDataTest1.mySubjectSelected]
         var myGetmySelected  = mySelected?.assign
         binding.tvSelected.text =myGetmySelected
 

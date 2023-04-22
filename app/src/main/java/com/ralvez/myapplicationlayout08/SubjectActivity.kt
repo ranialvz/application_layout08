@@ -8,7 +8,7 @@ import com.ralvez.myapplicationlayout08.databinding.ActivitySubjectBinding
 
 class SubjectActivity : AppCompatActivity() {
     lateinit var binding: ActivitySubjectBinding
-
+    val myData1 = MyDataTest1.mySubject
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -47,10 +47,11 @@ class SubjectActivity : AppCompatActivity() {
 
 
         }
-        val subjectBar = intent.getStringExtra("item")
+        val mySelected = myData1[MyDataTest1.mySubjectSelected]
+        var myGetmySelected  = mySelected?.subject
         val actionbar = supportActionBar
         //set actionbar title
-        actionbar!!.title = subjectBar
+        actionbar!!.title = myGetmySelected
         //set back button
         actionbar.setDisplayHomeAsUpEnabled(true)
     }

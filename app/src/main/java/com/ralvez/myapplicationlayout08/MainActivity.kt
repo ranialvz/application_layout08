@@ -1,8 +1,5 @@
 package com.ralvez.myapplicationlayout08
 
-
-
-
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -27,7 +24,6 @@ import com.karumi.dexter.listener.single.PermissionListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ralvez.myapplicationlayout08.databinding.ActivityMainBinding
 
-
 class MainActivity : AppCompatActivity(){
     private lateinit var subjectAdapter: SubjectAdapter
     private lateinit var binding : ActivityMainBinding
@@ -44,11 +40,10 @@ class MainActivity : AppCompatActivity(){
         val myData1 = MyDataTest1.mySubject
 
 
-        val myAdapter= SubjectAdapter(myData1) { subject ->
+        val myAdapter= SubjectAdapter(myData1) { position ->
             val intent = Intent(this, SubjectActivity::class.java)
-            val getSub= subject.subject
+            val getSub= position
             MyDataTest1.mySubjectSelected=getSub
-            intent.putExtra("item", getSub)
             startActivity(intent)
         }
 

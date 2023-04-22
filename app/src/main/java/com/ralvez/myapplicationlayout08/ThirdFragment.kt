@@ -20,7 +20,7 @@ class ThirdFragment : Fragment() {
         inflater: LayoutInflater,container: ViewGroup?,savedInstanceState: Bundle?):View? {
         binding = FragmentThirdBinding.inflate(inflater, container, false)
 
-        val mySelected = myData1.find{it.subject == MyDataTest1.mySubjectSelected }
+        val mySelected = myData1[MyDataTest1.mySubjectSelected]
         var myGetmySelected  = mySelected?.note
         binding.tvSelected.text =myGetmySelected
 

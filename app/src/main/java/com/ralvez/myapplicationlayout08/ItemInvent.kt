@@ -4,7 +4,7 @@ package com.ralvez.myapplicationlayout08
 object MyDataTest1{
 
     var mySubject:  ArrayList<Subject> = ArrayList()
-    var mySubjectSelected: String =""
+    var mySubjectSelected: Int = 0
 
     fun test(){
 

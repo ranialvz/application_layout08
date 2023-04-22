@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class SubjectAdapter(
     private val subjects: List<Subject>,
-    private val onItemClick: (subject: Subject) -> Unit
+    private val onItemClick: (position: Int) -> Unit
 ) : RecyclerView.Adapter<SubjectAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -23,7 +23,7 @@ class SubjectAdapter(
         val subject = subjects[position]
         holder.textView1.text = subject.subject
 
-        holder.itemView.setOnClickListener { onItemClick(subject) }
+        holder.itemView.setOnClickListener { onItemClick(position) }
     }
 
     override fun getItemCount(): Int {
